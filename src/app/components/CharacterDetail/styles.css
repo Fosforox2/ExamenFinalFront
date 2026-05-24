@@ -1,0 +1,70 @@
+.CharacterDetailContainer{
+    display: flex;
+    gap: 60px;
+
+    padding: 40px;
+
+    background-color: black;
+
+    border-radius: 20px;
+}
+
+.CharacterDetailContainer img{
+    width: 600px;
+
+    border-radius: 20px;
+}
+
+.CharacterInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 25px;
+
+    color: #770000;
+}
+
+.CharacterInfo h1{
+    margin: 0;
+
+    font-size: 8rem;
+
+    color: #770000;
+}
+
+.CharacterInfo p{
+    margin: 0;
+
+    font-size: 2.8rem;
+}
+
+.CharacterInfo span{
+    font-weight: bold;
+
+    color: #770000;
+}
+.Description{
+    margin: 0;
+
+    font-size: 0.8rem;
+    color: green;
+}
+.StarButton{
+    border: none;
+    background: none;
+
+    font-size: 8rem;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.StarButton:hover{
+    transform: scale(1.15);
+}
+
+.StarButton{
+    color: gold;
+}

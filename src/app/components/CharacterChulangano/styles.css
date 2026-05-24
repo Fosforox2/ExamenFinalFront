@@ -1,0 +1,40 @@
+.ContainerChulangano {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    gap: 25px;
+    padding: 10px;
+
+    
+    border-radius: 25px;
+    width: 100%;
+    box-sizing: border-box;
+
+    background-color: rgba(0,0,0,0.95);
+
+
+}
+
+.ContainerChulangano img {
+    border-radius: 50%;
+    height: 150px;
+}
+
+.InfoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+    color: white;
+}
+.ContainerChulanganoLink{
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+}
+.BotonFavorito{
+    
+}
