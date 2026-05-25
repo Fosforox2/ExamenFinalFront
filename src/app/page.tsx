@@ -5,6 +5,7 @@ import { ResultCharactersT } from "./types/RicardoYMortirio";
 import api from "@/api/api";
 import CharacterChulangano from "./components/CharacterChulangano";
 import Paginador from "./components/Paginador";
+import Filtros from "./components/Filtros";
 
 
 const MainPage = () => {
@@ -82,53 +83,41 @@ const MainPage = () => {
         
         <div className="ContainerCharacters">
 
-            <div className="SearchContainer">
+            <Filtros
+              name={name}
+              setName={setName}
 
-                <input
-                    value={name}
-                    onChange={(e)=>{
+              buscar={()=>{
 
-                        setName(e.target.value);
+                  setPage(1);
 
-                    }}
-                    placeholder="Buscar personaje..."
-                />
+                  setFinalName(name);
 
-                <button onClick={()=>{
+              }}
 
-                    setPage(1);
+              cambiarEstado={()=>{
 
-                    setFinalName(name);
+                  setPage(1);
 
-                }}>
-                    Buscar
-                </button>
-                <div className="FiltroEstado">
-                 <button onClick={()=>{
+                  setStatusIndex((prev)=>
+                      (prev + 1) % filtradoEstado.length
+                  );
 
-                    setPage(1);
+              }}
 
-                    setStatusIndex((prev)=>
-                        (prev + 1) % filtradoEstado.length
-                    );
+              cambiarGenero={()=>{
 
-                }}>
-                    Estado: {estado}
-                </button>
+                  setPage(1);
 
-                <button onClick={()=>{
+                  setGenderIndex((prev)=>
+                      (prev + 1) % filtradoGenero.length
+                  );
 
-                    setPage(1);
+              }}
 
-                    setGenderIndex((prev)=>
-                        (prev + 1) % filtradoGenero.length
-                    );
-
-                }}>
-                    Género: {genero}
-                </button>
-              </div>
-            </div>
+              estado={estado}
+              genero={genero}
+          />
             
             {!loading && !resultCharacters && (
                 <h2>No se encontraron personajes</h2>
