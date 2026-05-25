@@ -6,7 +6,7 @@ const CharacterChulangano = ({item} : {item: CharacterT}) => {
 
 
     return(
-        <Link href={`/items/${item.id}`} className="ContainerChulanganoLink">
+        <Link href={`/character/${item.id}`} className="ContainerChulanganoLink">
             
             <div className="ContainerChulangano">
                 <img src={item.image}/>

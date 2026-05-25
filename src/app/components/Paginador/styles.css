@@ -12,6 +12,18 @@
 .PaginadorContainer h1 {
 
 }
+.PaginadorContainer button{
+    min-width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 12px;
+    background-color: #202329;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
 
 .arrowContainer{
     display: flex;
@@ -36,4 +48,9 @@
 
 .arrowContainer p {
     font-size: 20px;
+}
+
+.PaginadorContainer .active{
+    background-color: #3c8c5a;
+    transform: scale(1.08);
 }

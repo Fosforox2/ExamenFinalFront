@@ -5,7 +5,6 @@ const NavigatorPages = () => {
     type LinkType = {name: string,link: string}
     const enlaces : LinkType[] = [
         {name: "El hogar",link: "/"},
-        {name: "Itemcitos",link: "/items"},
         {name: "Favoritos",link: "/favoritos"}
     ]
     return (
